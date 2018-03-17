@@ -31,8 +31,8 @@ Backend project (API) for a food delivery application.
 
 ## Setup & Run
 
-- execute the file `database.sql` on local installation of MySQL 5.7+ (you can change the server editing the file `application.properties`).
 - `clone`
+- execute the file `database.sql` on local installation of MySQL 5.7+ (you can change the server editing the file `application.properties`).
 - `mvn spring-boot:run`
 - go to `http://localhost:8080/swagger-ui.html#/` to see the available endpoints
 
