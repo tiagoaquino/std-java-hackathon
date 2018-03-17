@@ -23,6 +23,12 @@ Backend project (API) for a food delivery application.
 
 `Order` - create, check status, cancel orders.
 
+`Store` - store that have list of products.
+
+
+## Entity Diagram
+![](entity-diagram.png?raw=true)
+
 ## Setup & Run
 
 - execute the file `database.sql` on local installation of MySQL 5.7+ (you can change the server editing the file `application.properties`).
