@@ -1,0 +1,256 @@
+{
+	"info": {
+		"name": "SkipTD_JavaChallange",
+		"_postman_id": "98b85a4e-d885-4921-9bfe-988432930b8d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"tiago2\",\n  \"name\": \"tnma\",\n  \"password\": \"1234\",\n  \"address\": \"Rua da Nasa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "1 - Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/auth?email=tiago&password=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tiago",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYWEiLCJleHAiOjE1MjIxODU1MjR9.h7Ot30SPWJFLOgxaeX7SDW1l5Xd3xwousAP5vCoys6LlkD8TWkiSuV7U3KNEQuJP7DC-Nn5V_P4nwkvzv9q_9w"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Search Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/products/search/pi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"search",
+						"pi"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n  \"customerId\": 1,\n  \"deliveryAddress\": \"Rod A\",\n  \"contact\": \"Tiago\",\n  \"storeId\": 1,\n  \"orderItems\": [\n    {\n      \"product\": {\n        \"id\": 1\n      },\n      \"price\": 12,\n      \"quantity\": 4,\n      \"total\": 48\n    }\n  ],\n  \"total\": 48\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 2,\n\"name\": \"Bla\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/cancel/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"cancel",
+						"21"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Orders by Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/orders/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"customer"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Orders by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/orders/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"21"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bfe4c048-a74a-42d1-a7f9-7888d5d3d5c9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4b147d45-440d-4c83-a9fc-aba46216cbce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
