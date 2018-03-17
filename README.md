@@ -39,7 +39,7 @@ Backend project (API) for a food delivery application.
 
 ## API Docs
 
-Available at: `http://localhost:8080/swagger-ui.html#/`
+Available at: `http://localhost:8080/swagger-ui.html`
 
 This project's web services documentation was generated using Spring and [Swagger](https://swagger.io/) integration, the SpringFox project.
 
